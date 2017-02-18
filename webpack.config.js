@@ -1,9 +1,7 @@
 var webpack = require('webpack')
 var path = require('path')
+
 module.exports = {
-  debug: true,
-  devtool: 'inline-source-map',
-  noInfo: false,
   entry: path.resolve(__dirname, 'app'),
   target: 'web',
   output: {
@@ -16,8 +14,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /(\.css)$/, loaders: ['style', 'css']}
+      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
+      {test: /(\.css)$/, loaders: ['style-loader', 'css-loader']}
     ]
   }
 }
