@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import HelloWorld from './components/HelloWorld'
+import { Router, hashHistory, browserHistory } from 'react-router'
+import routes from './routes'
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'))
+ReactDOM.render(<Router routes={routes} history={browserHistory} />, document.getElementById('app'))

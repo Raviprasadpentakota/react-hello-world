@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "npm-run-all --parallel webpack:build server",
+    "webpack:build": "webpack -w",
+    "server": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.14.1",
+    "npm-run-all": "^4.0.1",
+    "path": "^0.12.7",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
